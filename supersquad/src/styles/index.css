@@ -1,0 +1,29 @@
+body {
+	background-image: url('../assets/background.jpg');
+	height: 100%;
+	background-size: cover;
+	background-repeat: none;
+	opacity: .8;
+}
+
+h4 {
+	margin-top: 1em;
+}
+
+.App {
+	text-align: center;
+	padding: 5%;
+}
+
+.list-group-item.between {
+	justify-content: space-between;
+}
+
+.list-item {
+	display: inline-block;
+	/* align-self: center; */
+}
+
+.right-button {
+	cursor: pointer;
+}
