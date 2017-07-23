@@ -1,33 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions';
 
-class CharacterList extends Component {
-	render() {
-		return (
-			<div>
-				<h4>Characters</h4>
-				<ul className='list-group'>
-					{
-						this.props.characters.map(character => {
-							return (
-								<li key={character.id} className='list-group-item between'>
-									<div className='list-item'>{character.name}</div>
-									<div
-										className='list-item right-button'
-										onClick={() => { this.props.addCharacterById(character.id) }}
-									>
-										+
-									</div>
-								</li>
-							)
-						})
-					}
-				</ul>
-			</div>
-		)
-	}
+const CharacterList = (props) => {
+	return (
+		<div>
+			<h4>Characters</h4>
+			<ul className='list-group'>
+				{
+					props.characters.map(character => {
+						return (
+							<li key={character.id} className='list-group-item between'>
+								<div className='list-item'>{character.name}</div>
+								<div
+									className='list-item right-button'
+									onClick={() => { props.addCharacterById(character.id) }}
+								>
+									+
+								</div>
+							</li>
+						)
+					})
+				}
+			</ul>
+		</div>
+	);
 }
 
 function mapStateToProps(state) {

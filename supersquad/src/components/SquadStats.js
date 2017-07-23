@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-
 function overalStr(props) {
 	let strength = 0;
 	props.heroes.forEach(hero => strength += hero.strength);
@@ -39,7 +38,6 @@ const SquadStats = (props) => {
 	)
 }
 
-// export default connect(mapStateToProps, null)(SquadStats);
 export default connect(
 	({heroes}) => ({heroes})
 )(SquadStats);

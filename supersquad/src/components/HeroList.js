@@ -5,38 +5,31 @@ import * as actionCreators from '../actions';
 
 import '../styles/index.css';
 
-class HeroList extends Component {
-	render() {
-		return (
-			<div>
-				<h4>The Hero Squad</h4>
-				<ul className='list-group'>
-					{
-						this.props.heroes.map(hero => {
-							return (
-								<li key={hero.id} className='list-group-item between'>
-									<div key={hero.id} className='list-item'>{hero.name}</div>
-									<div
-										className='list-item right-button'
-										onClick={() => {
-											this.props.removeCharacterById(hero.id)
-										}}
-									>-</div>
-								</li>
-							)
-						})
-					}
-				</ul>
-			</div>
-		);
-	}
-}
+const HeroList = (props) => {
+	return (
+		<div>
+			<h4>The Hero Squad</h4>
+			<ul className='list-group'>
+				{
+					props.heroes.map(hero => {
+						return (
+							<li key={hero.id} className='list-group-item between'>
+								<div key={hero.id} className='list-item'>{hero.name}</div>
+								<div
+									className='list-item right-button'
+									onClick={() => {
+										props.removeCharacterById(hero.id)
+									}}
+								>-</div>
+							</li>
+						)
+					})
+				}
+			</ul>
+		</div>
 
-// function mapStateToProps(state) {
-// 	return {
-// 		heroes: state.heroes
-// 	}
-// }
+	)
+}
 
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators(actionCreators, dispatch);

@@ -20,8 +20,6 @@ class App extends Component {
 					<div className='col-sm-12 col-md-4'>
 						<SquadStats />
 					</div>
-
-					
 				</div>
 			</div>
 		);
