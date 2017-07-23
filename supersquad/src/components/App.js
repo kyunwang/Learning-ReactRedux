@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CharacterList from './CharacterList';
 import HeroList from './HeroList';
+import SquadStats from './SquadStats';
+
 import '../styles/index.css';
 
 class App extends Component {
@@ -9,12 +11,16 @@ class App extends Component {
 			<div className='App'>
 				<h2>SuperSquad</h2>
 				<div className='row'>
-					<div className='col col-sm-16 col-md-6'>
+					<div className='col-sm-12 col-md-4'>
 						<CharacterList />
 					</div>
-					<div className='col col-sm-16 col-md-6'>
+					<div className='col-sm-12 col-md-4'>
 						<HeroList />
 					</div>
+					<div className='col-sm-12 col-md-4'>
+						<SquadStats />
+					</div>
+
 					
 				</div>
 			</div>
