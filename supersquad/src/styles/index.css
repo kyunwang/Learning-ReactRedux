@@ -17,6 +17,7 @@ h4 {
 
 .list-group-item.between {
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .list-item {

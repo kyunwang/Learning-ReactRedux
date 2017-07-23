@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import * as actionCreators from '../actions';
 
 import '../styles/index.css';
 
@@ -12,8 +14,14 @@ class HeroList extends Component {
 					{
 						this.props.heroes.map(hero => {
 							return (
-								<li key={hero.key} className='list-group-item'>
-									<div className='list-item'>{hero.name}</div>
+								<li key={hero.id} className='list-group-item between'>
+									<div key={hero.id} className='list-item'>{hero.name}</div>
+									<div
+										className='list-item right-button'
+										onClick={() => {
+											this.props.removeCharacterById(hero.id)
+										}}
+									>-</div>
 								</li>
 							)
 						})
@@ -30,7 +38,9 @@ class HeroList extends Component {
 // 	}
 // }
 
-// function mapDispatchToProps()
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators(actionCreators, dispatch);
+} 
 
 // export default connect(mapStateToProps, null)(HeroList);
-export default connect(({ heroes }) => ({ heroes }))(HeroList);
+export default connect(({ heroes }) => ({ heroes }), mapDispatchToProps)(HeroList);

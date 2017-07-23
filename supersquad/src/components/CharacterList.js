@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions';
-// import { addCharacterById } as actionCreator from '../actions';
 
 class CharacterList extends Component {
 	render() {
-		console.log(this.props);
 		return (
 			<div>
 				<h4>Characters</h4>
