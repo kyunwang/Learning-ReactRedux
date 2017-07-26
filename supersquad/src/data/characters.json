@@ -68,5 +68,40 @@
 		"strength": 10,
 		"intelligence": 9,
 		"speed": 7
+	},
+	{
+		"id": 10,
+		"name": "Black Widow",
+		"strength": 7,
+		"intelligence": 9,
+		"speed": 9
+	},
+	{
+		"id": 11,
+		"name": "Puss in Boots",
+		"strength": 8,
+		"intelligence": 7,
+		"speed": 10
+	},
+	{
+		"id": 12,
+		"name": "Wolverine",
+		"strength": 9,
+		"intelligence": 7,
+		"speed": 9
+	},
+	{
+		"id": 13,
+		"name": "the Hulk",
+		"strength": 10,
+		"intelligence": 5,
+		"speed": 7
+	},
+	{
+		"id": 14,
+		"name": "Iron Man",
+		"strength": 9,
+		"intelligence": 9,
+		"speed": 9
 	}
 ]

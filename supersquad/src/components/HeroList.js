@@ -3,8 +3,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions';
 
-import '../styles/index.css';
-
 const HeroList = (props) => {
 	return (
 		<div>
