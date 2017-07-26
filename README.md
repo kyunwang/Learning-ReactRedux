@@ -1,4 +1,4 @@
 # Learning-ReactRedux
 Learning react redux
 
-Need to adjust readmes
+Mini project for learning Redux for react.

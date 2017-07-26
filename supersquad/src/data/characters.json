@@ -103,5 +103,12 @@
 		"strength": 9,
 		"intelligence": 9,
 		"speed": 9
+	},
+	{
+		"id": 15,
+		"name": "Spongebob Squarepants",
+		"strength": 3,
+		"intelligence": 3,
+		"speed": 20
 	}
 ]
