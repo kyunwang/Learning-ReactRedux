@@ -15,13 +15,12 @@ h4 {
 	padding: 5%;
 }
 
-.list-group-item p {
-	margin: 0;
+.column {
+	flex-direction: column;
 }
 
-.list-group-item.between {
-	justify-content: space-between;
-	flex-wrap: wrap;
+.list-group-item p {
+	margin: 0;
 }
 
 .list-item {
@@ -30,4 +29,10 @@ h4 {
 
 .right-button {
 	cursor: pointer;
+}
+
+.hero-info-con {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions';
@@ -13,14 +13,22 @@ const HeroList = (props) => {
 				{
 					props.heroes.map(hero => {
 						return (
-							<li key={hero.id} className='list-group-item between'>
-								<div key={hero.id} className='list-item'>{hero.name}</div>
-								<div
-									className='list-item right-button'
-									onClick={() => {
-										props.removeCharacterById(hero.id)
-									}}
-								>-</div>
+							<li key={hero.id} className='list-group-item column'>
+								<div className='hero-info-con'>
+									<div key={hero.id} className='list-item'>{hero.name}</div>
+									<div
+										className='list-item right-button'
+										onClick={() => {
+											props.removeCharacterById(hero.id)
+										}}
+									>-</div>
+								</div>
+
+								<div className='list-item hero-info-con'>
+									<p><b>Str:</b> {hero.strength}</p>
+									<p><b>Spd:</b> {hero.speed}</p>
+									<p><b>Int:</b> {hero.intelligence}</p>
+								</div>
 							</li>
 						)
 					})
@@ -33,7 +41,7 @@ const HeroList = (props) => {
 
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators(actionCreators, dispatch);
-} 
+}
 
 // export default connect(mapStateToProps, null)(HeroList);
 export default connect(({ heroes }) => ({ heroes }), mapDispatchToProps)(HeroList);
