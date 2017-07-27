@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
 	Form,
 	FormGroup,
@@ -7,6 +8,8 @@ import {
 	Button
 } from 'react-bootstrap';
 import axios from 'axios';
+
+import { setRecipes } from '../actions/index';
 
 class SearchRecipes extends Component {
 	constructor() {
@@ -22,14 +25,12 @@ class SearchRecipes extends Component {
 		const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`
 
 		// fetch(url, { method: 'GET' })
-		// .then(res => res.json())
+		// 	.then(res => res.json())
+		// 	.then(json => this.props.setRecipes(json));
 
 		axios.get(url)
-			.then(res => {
-				console.log(res);
-				return res;
-			})
-			.catch(err => console.log(err))
+			.then(res => this.props.setRecipes(res.data.results))
+			.catch(err => console.log(err));
 	}
 
 	render() {
@@ -63,4 +64,4 @@ class SearchRecipes extends Component {
 	}
 }
 
-export default SearchRecipes;
+export default connect(null, { setRecipes })(SearchRecipes);
