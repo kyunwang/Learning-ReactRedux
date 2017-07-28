@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { deleteFavorite } from '../actions/';
 
 import RecipeCard from './RecipeCard';
 
 function FavoriteRecipes({ favoriteRecipes }) {
-	console.log(favoriteRecipes);
 	return (
 		<div>
 			<h4 className="link">
@@ -18,8 +18,9 @@ function FavoriteRecipes({ favoriteRecipes }) {
 						<RecipeCard
 							key={index}
 							recipe={recipe}
+							deleteBtn
 						/>
-					)
+					);
 				})
 			}
 		</div>

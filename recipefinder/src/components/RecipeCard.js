@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addFavorite } from '../actions';
+import { addFavorite, deleteFavorite } from '../actions';
 
 
 class RecipeCard extends Component {
 	static get defaultProps() {
 		return {
-			favoriteBtn: false
+			favoriteBtn: false,
+			deleteBtn: false
 		}
 	}
 
@@ -24,28 +25,34 @@ class RecipeCard extends Component {
 
 
 	render() {
-		let { recipe, favoriteBtn } = this.props;
+		let { recipe, favoriteBtn, deleteBtn, deleteFavorite } = this.props;
 		return (
 			<div className="recipe-item">
 				{
 					favoriteBtn ?
-
 						this.state.favorited ?
-							<div
-								className="star"
-							// onClick={() => this.favorite(recipe)}				
-							>
+							<div className="card-button star">
 								&#9733;
-						</div>
+							</div>
 							:
 							<div
-								className="star"
+								className="card-button star"
 								onClick={() => this.favorite(recipe)}
 							>
-
 								&#9734;
-						</div>
+							</div>
+						:
+						null
+				}
 
+				{
+					deleteBtn ?
+						<div
+							onClick={() => deleteFavorite(recipe)}
+							className="card-button"
+						>
+							X
+						</div>
 						:
 						null
 				}
@@ -67,4 +74,4 @@ class RecipeCard extends Component {
 	}
 }
 
-export default connect(null, { addFavorite })(RecipeCard);
+export default connect(null, { addFavorite, deleteFavorite })(RecipeCard);

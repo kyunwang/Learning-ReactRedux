@@ -24,13 +24,13 @@ class SearchRecipes extends Component {
 		let { ingredients, dish } = this.state;
 		const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`
 
-		// fetch(url, { method: 'GET' })
-		// 	.then(res => res.json())
-		// 	.then(json => this.props.setRecipes(json));
-
 		axios.get(url)
 			.then(res => this.props.setRecipes(res.data.results))
 			.catch(err => console.log(err));
+
+		// fetch(url, { method: 'GET' })
+		// 	.then(res => res.json())
+		// 	.then(json => this.props.setRecipes(json));
 	}
 
 	render() {
@@ -56,9 +56,9 @@ class SearchRecipes extends Component {
 					/>
 				</FormGroup>
 				{' '}
-				<Button
-					onClick={() => this.search()}
-				>Submit</Button>
+				<Button onClick={() => this.search()}>
+					Submit
+				</Button>
 			</Form>
 		);
 	}

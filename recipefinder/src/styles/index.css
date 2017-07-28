@@ -22,19 +22,24 @@ body {
 
 .recipe-img {
 	display: inline-block;
-	/* right: 0; */
 	width: 100px;
 	height: 100px;
 	object-fit: cover;
 	border: 1px solid #000;
 }
 
-.star {
+
+.card-button {
 	cursor: pointer;
 	font-size: 1em;
 	margin-right: 1em;
+}
+
+.star {
 	color: sandybrown;
 }
+
+.delete {}
 
 .link {
 	position: absolute;
