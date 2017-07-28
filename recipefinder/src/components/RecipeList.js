@@ -1,11 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 import RecipeCard from './RecipeCard';
 
 function RecipeList(props) {
 	return (
 		<div>
+			{
+				props.favoriteRecipes.length ?
+					<h4 className="link">
+						<Link to="/favorites">My Favorites</Link>
+					</h4>
+					:
+					null
+			}
+
 			{
 				props.recipes.map((recipe, index) => {
 					return (

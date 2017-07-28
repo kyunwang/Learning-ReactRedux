@@ -35,3 +35,9 @@ body {
 	margin-right: 1em;
 	color: sandybrown;
 }
+
+.link {
+	position: absolute;
+	top: 2em;
+	left: 2em;
+}
