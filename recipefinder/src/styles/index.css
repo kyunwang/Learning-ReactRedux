@@ -4,3 +4,34 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
+.recipe-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: .8em;
+	padding: .5em;
+}
+
+.recipe-text {
+	display: inline-block;
+	text-align: left;
+	padding-left: 0.8em;
+	width: 25em;
+}
+
+.recipe-img {
+	display: inline-block;
+	/* right: 0; */
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border: 1px solid #000;
+}
+
+.star {
+	cursor: pointer;
+	font-size: 1em;
+	margin-right: 1em;
+	color: sandybrown;
+}

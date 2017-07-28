@@ -40,8 +40,8 @@ class SearchRecipes extends Component {
 					<ControlLabel>Ingredients</ControlLabel>
 					{' '}
 					<FormControl
-						type='text'
-						placeholder='e.g. ginger, chicken'
+						type="text"
+						placeholder="e.g. ginger, chicken"
 						onChange={(event) => this.setState({ ingredients: event.target.value })}
 					/>
 				</FormGroup>
@@ -50,8 +50,8 @@ class SearchRecipes extends Component {
 					<ControlLabel>Dish</ControlLabel>
 					{' '}
 					<FormControl
-						type='text'
-						placeholder='e.g. soup'
+						type="text"
+						placeholder="e.g. soup"
 						onChange={(event) => this.setState({ dish: event.target.value })}
 					/>
 				</FormGroup>

@@ -12,6 +12,7 @@ function RecipeList(props) {
 						<RecipeCard
 							key={index}
 							recipe={recipe}
+							favoriteBtn={true}
 						/>
 					);
 				})
@@ -20,7 +21,8 @@ function RecipeList(props) {
 	);
 }
 
-function mapStateToProps(state) { return state; }
-
+// function mapStateToProps(state) { return state; }
 // export default connect(mapStateToProps, null)(RecipeList);
+
+// No need to create a mapStateToProps function. Use destructuring. It is much easier!
 export default connect(state => state)(RecipeList);
