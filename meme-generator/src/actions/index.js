@@ -12,7 +12,6 @@ function receiveMemes(json) {
 }
 
 function newMeme(meme) {
-	console.log(meme);
 	return {
 		type: NEW_MEME,
 		meme
@@ -34,7 +33,6 @@ export function createMeme(params) {
 	const bodyParams = Object.keys(params).map(key => {
 		return `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`
 	}).join('&');
-	console.log(bodyParams);
 
 	return function (dispatch) {
 		return fetch('https://api.imgflip.com/caption_image', {

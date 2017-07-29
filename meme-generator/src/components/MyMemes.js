@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 function MyMemes(props) {
-	console.log(props);
 	return (
 		<div>
 			{
@@ -14,7 +13,7 @@ function MyMemes(props) {
 							alt={`my meme ${index}`}
 							className="my-meme-img"
 						/>
-					)
+					);
 				})
 			}
 		</div>
