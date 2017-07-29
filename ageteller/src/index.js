@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import App from './components/App'
+
+ReactDOM.render(
+	// <div>ageteller</div>, document.getElementById('root')
+	<App />, document.querySelector('#root')
+)
+
