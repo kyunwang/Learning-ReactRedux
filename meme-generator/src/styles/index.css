@@ -32,10 +32,42 @@ body {
 	filter: brightness(90%);
 }
 
+.darken-img {
+	background-color: #888;
+	filter: brightness(10%);
+	animation-name: darken-img;
+	animation-duration: 1s;
+}
+
 .meme-text {
 	width: 8em;
 	text-align: center;
+	font-size: .9em;
 	position: absolute;
 	bottom: 0;
 	padding: .2em;
+	animation-name: fade-in;
+	animation-duration: 1s;
+}
+
+.no-text {
+	display: none;
+}
+
+@keyframes darken-img {
+	from {
+		filter: brightness(90%)
+	}
+	to {
+		filter: brightness(10%)
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 100
+	}
 }
