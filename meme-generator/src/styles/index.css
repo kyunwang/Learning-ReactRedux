@@ -32,6 +32,16 @@ body {
 	filter: brightness(90%);
 }
 
+.my-meme-img {
+	display: inline-block;
+	position: relative;
+	height: 30%;
+	width: 30%;
+	margin: .5em;
+	border-radius: 3px;
+	border: 2px solid #fff;
+}
+
 .darken-img {
 	background-color: #888;
 	filter: brightness(10%);

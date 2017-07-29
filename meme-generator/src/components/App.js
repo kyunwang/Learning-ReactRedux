@@ -10,6 +10,7 @@ import {
 } from 'react-bootstrap';
 
 import MemeItem from './MemeItem';
+import MyMemes from './MyMemes';
 
 class App extends Component {
 	constructor() {
@@ -25,6 +26,8 @@ class App extends Component {
 			<div>
 				<h2><u>Welcome to The Meme Generator</u></h2>
 				<h4><i>Write Your Text</i></h4>
+
+				<MyMemes />
 
 				<Form inline>
 					<FormGroup>
