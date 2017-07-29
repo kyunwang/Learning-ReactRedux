@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { createMeme } from '../actions';
+import { connect } from 'react-redux';
 
 class MemeItem extends Component {
 	constructor() {
@@ -8,6 +10,16 @@ class MemeItem extends Component {
 		}
 	}
 
+	postMeme() {
+		let { text0, text1, createMeme } = this.props;
+		let memeObj = {
+			template_id: this.props.meme.id,
+			text0: text0,
+			text1: text1
+		};
+		createMeme(memeObj);
+	}
+
 	render() {
 		let { meme } = this.props;
 		return (
@@ -15,6 +27,7 @@ class MemeItem extends Component {
 				className="meme-item"
 				onMouseEnter={() => this.setState({ hovered: true })}
 				onMouseLeave={() => this.setState({ hovered: false })}
+				onClick={() => this.postMeme()}
 			>
 				<img
 					src={meme.url}
@@ -26,4 +39,4 @@ class MemeItem extends Component {
 		);
 	}
 };
-export default MemeItem;
+export default connect(null, { createMeme })(MemeItem);
