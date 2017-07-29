@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../styles/index.css';
 
+import {
+	Form,
+	FormGroup,
+	FormControl,
+	ControlLabel
+} from 'react-bootstrap';
+
 import MemeItem from './MemeItem';
 
 class App extends Component {
@@ -14,7 +21,22 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<h2>Welcome to The Meme Generator</h2>
+				<h2><u>Welcome to The Meme Generator</u></h2>
+				<h4><i>Write Your Text</i></h4>
+
+				<Form inline>
+					<FormGroup>
+						<ControlLabel>Top</ControlLabel>
+						{' '}
+						<FormControl type="text" />
+					</FormGroup>
+					<FormGroup>
+						<ControlLabel>Bottom</ControlLabel>
+						{' '}
+						<FormControl type="text" />
+					</FormGroup>
+				</Form>
+
 				{
 					this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
 						return (
