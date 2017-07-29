@@ -15,18 +15,17 @@ class App extends Component {
 		super()
 		this.state = {
 			newDate: '',
-			birthday: '1992-04-15',
 			showStats: false,
 			showError: false
 		}
 	}
 
 	_changeBirthday() {
-		console.log(this.state);
 		if (this.state.newDate === '') {
-			this.setState({ showError: true });
+			this.setState({ showError: true, showStats: false });
 			return;
 		};
+
 		this.setState({
 			birthday: this.state.newDate,
 			showStats: true,
