@@ -1,3 +1,3 @@
 # Supersquad
 
-- Pretty much a team builder of superheroes (kinda superheroes)
+- Pretty much a teambuilder of superheroes (kinda superheroes, well spongebob is a hero of crusty crab...)
